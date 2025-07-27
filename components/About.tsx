@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import { Separator } from "./ui/separator";
+import { PiHandbag } from "react-icons/pi";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-6 py-20 bg-background text-foreground"
+      className="min-h-screen flex items-center justify-center px-6 pt-32 pb-20 bg-background text-foreground"
     >
       <div className="max-w-3xl w-full flex flex-col items-start text-left space-y-8 font-body">
         
@@ -51,6 +52,13 @@ const About = () => {
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
             <a href="https://twitter.com/tanishqstwt"><span className="text-sm text-green-400">Available for new opportunities</span></a>
           </div>
+
+          <a href="mailto:tanishqp101204@gmail.com?subject=Interested in hiring you" className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-primary text-primary rounded-full hover:bg-primary hover:text-background transition" >
+            <PiHandbag className="w-4 h-4" />
+
+            Deploy me
+            
+          </a>
         </div>
 
         

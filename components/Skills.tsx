@@ -1,4 +1,4 @@
-import { SkillBadge } from "./Skillbadge";
+
 import { FaReact, FaNodeJs, FaGithub, FaGitAlt, FaJava } from "react-icons/fa";
 import { 
   SiNextdotjs, 
@@ -21,7 +21,9 @@ import {
   SiClerk 
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import { Separator } from "./ui/separator";
+import { SkillBadge } from "./Skillbadge";
+
+
 
 const Skills = () => {
   return (
