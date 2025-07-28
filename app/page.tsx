@@ -25,9 +25,6 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
-
-        <hr className="my-8 border-muted/30" />
-
         <Blogs />
         <Quote />
         <Separator />
