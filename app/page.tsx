@@ -21,7 +21,7 @@ export default function Home() {
       
       <FixedModeToggle />
       <LocalTime />
-      <div className="w-full flex flex-col items-center px-4">
+      <div className="w-full flex flex-col items-center">
         <About />
         <Skills />
         <Projects />
