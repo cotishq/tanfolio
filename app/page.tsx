@@ -9,7 +9,7 @@ import Projects from "@/components/Projects";
 import { Quote } from "@/components/Quote";
 
 import Skills from "@/components/Skills";
-import { Separator } from "@/components/ui/separator";
+
 
 
 export default function Home() {
@@ -26,7 +26,6 @@ export default function Home() {
         <Projects /> 
         <Blogs />    
         <Quote />
-        <Separator /> 
         <Footer />
       </div>
     </div>

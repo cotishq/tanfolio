@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/portfolio-og.png",
+        url: "/og-portfolio.png",
         width: 1200,
         height: 630,
         alt: "Tanishq's Portfolio Preview",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     images: ["/portfolio-og.png"],
   },
   icons: {
-    icon: "/avatar.jpg",
+    icon: "/favicon.ico",
   },
   authors: [{ name: "Tanishq Patil", url: "https://tanishq.dev" }],
 };

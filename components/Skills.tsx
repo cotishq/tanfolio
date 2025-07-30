@@ -21,7 +21,7 @@ import {
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { SkillBadge } from "./Skillbadge";
-import { Separator } from "./ui/separator";
+
 
 
 const Skills = () => {
@@ -29,7 +29,7 @@ const Skills = () => {
     <section className="py-16" id="skills">
       <div className="max-w-4xl mx-auto px-6">
         <div className="mb-12">
-          <h2 className="text-2xl font-display mb-3">Tech Stack</h2>
+          <h2 className="text-2xl font-display border-b border-neutral-300 dark:border-white/10 pb-2 mb-3">Tech Stack</h2>
           <p className="font-body leading-relaxed">
             This list grows faster than my GitHub stars — and I kinda <span className="text-primary">like</span> that.
           </p>
@@ -90,7 +90,7 @@ const Skills = () => {
               <SkillBadge name="Postman" icon={<SiPostman />} />
               <SkillBadge name="Figma" icon={<SiFigma />} />
             </div>
-            <Separator />
+            
           </div>
         </div>
       </div>
