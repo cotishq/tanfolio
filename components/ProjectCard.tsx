@@ -12,7 +12,7 @@ const techIcons : {[key: string] : any} = {
   "ImageKit": Globe,
   "React": Code,
   "TypeScript": Code,
-  "Tailwind": Code
+  "TailwindCss": Code
 };
 
 
@@ -34,7 +34,7 @@ export function ProjectCard({ image, title, description, tech, github, live , st
         <img 
           src={image} 
           alt={title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-48 sm:h-52 md:h-60 object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         
@@ -83,7 +83,7 @@ export function ProjectCard({ image, title, description, tech, github, live , st
         </p>
 
         <div className="flex flex-wrap gap-1.5 mb-4">
-          {tech.slice(0, 6).map((item, index) => {
+          {tech.map((item, index) => {
             const Icon = techIcons[item];
             return (
               <div 
@@ -95,11 +95,7 @@ export function ProjectCard({ image, title, description, tech, github, live , st
               </div>
             );
           })}
-          {tech.length > 6 && (
-            <div className="px-2 py-1 bg-muted/30 rounded-md text-xs font-medium text-muted-foreground">
-              +{tech.length - 6}
-            </div>
-          )}
+          
         </div>
 
         <div className="flex gap-3 pt-3 border-t border-border/50">

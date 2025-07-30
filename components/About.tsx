@@ -36,7 +36,7 @@ const About = () => {
             style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}
           >
             <Image
-              src="/avatar.jpg"
+              src="/profilepictwt.jpg"
               alt="Tanishq Avatar"
               width={60}
               height={60}
@@ -148,6 +148,8 @@ const About = () => {
             </a>
           </div>
         </div>
+
+        <Separator />
 
       </div>
     </section>

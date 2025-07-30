@@ -1,4 +1,3 @@
-
 import { FaReact, FaNodeJs, FaGithub, FaGitAlt, FaJava } from "react-icons/fa";
 import { 
   SiNextdotjs, 
@@ -22,33 +21,24 @@ import {
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { SkillBadge } from "./Skillbadge";
+import { Separator } from "./ui/separator";
 
 
 const Skills = () => {
   return (
-    <section 
-      id="skills"
-      className="scroll-mt-20 pt-8 pb-16 px-6 bg-background text-foreground"
-    >
-      <div className="max-w-3xl w-full flex flex-col items-start text-left space-y-4 font-body">
-        
-        
-        <div className="space-y-1">
-          <h2 className="text-3xl md:text-4xl font-display text-primary tracking-wide">
-            TECH STACK
-          </h2>
-          <p className="text-muted-foreground italic text-base">
+    <section className="py-16" id="skills">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="mb-12">
+          <h2 className="text-2xl font-display mb-3">Tech Stack</h2>
+          <p className="font-body leading-relaxed">
             This list grows faster than my GitHub stars — and I kinda <span className="text-primary">like</span> that.
           </p>
         </div>
 
-        
-        <div className="space-y-3 w-full">
-          
-          
-          <div className="space-y-2">
-            <p className="font-mono text-xs text-muted-foreground tracking-wider">
-              &lt; LANGUAGES /&gt;
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <p className="font-mono text-xs text-muted-foreground tracking-wider uppercase">
+              &lt; Languages /&gt;
             </p>
             <div className="flex flex-wrap gap-2">
               <SkillBadge name="HTML" icon={<SiHtml5 />} />
@@ -60,10 +50,9 @@ const Skills = () => {
             </div>
           </div>
 
-          
-          <div className="space-y-2">
-            <p className="font-mono text-xs text-muted-foreground tracking-wider">
-              &lt; FRAMEWORKS & LIBS /&gt;
+          <div className="space-y-3">
+            <p className="font-mono text-xs text-muted-foreground tracking-wider uppercase">
+              &lt; Frameworks & Libs /&gt;
             </p>
             <div className="flex flex-wrap gap-2">
               <SkillBadge name="React" icon={<FaReact />} />
@@ -75,10 +64,9 @@ const Skills = () => {
             </div>
           </div>
 
-          
-          <div className="space-y-2">
-            <p className="font-mono text-xs text-muted-foreground tracking-wider">
-              &lt; BACKEND & DATABASE /&gt;
+          <div className="space-y-3">
+            <p className="font-mono text-xs text-muted-foreground tracking-wider uppercase">
+              &lt; Backend & Database /&gt;
             </p>
             <div className="flex flex-wrap gap-2">
               <SkillBadge name="Node.js" icon={<FaNodeJs />} />
@@ -90,10 +78,9 @@ const Skills = () => {
             </div>
           </div>
 
-          
-          <div className="space-y-2">
-            <p className="font-mono text-xs text-muted-foreground tracking-wider">
-              &lt; DEVELOPER TOOLS /&gt;
+          <div className="space-y-3">
+            <p className="font-mono text-xs text-muted-foreground tracking-wider uppercase">
+              &lt; Developer Tools /&gt;
             </p>
             <div className="flex flex-wrap gap-2">
               <SkillBadge name="Git" icon={<FaGitAlt />} />
@@ -103,10 +90,16 @@ const Skills = () => {
               <SkillBadge name="Postman" icon={<SiPostman />} />
               <SkillBadge name="Figma" icon={<SiFigma />} />
             </div>
+            <Separator />
           </div>
         </div>
       </div>
+      
     </section>
+
+    
+
+    
   );
 };
 

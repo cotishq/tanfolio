@@ -17,7 +17,7 @@ export default function Projects() {
             image="/og.png"
             title="CloudNest"
             description="A modern file storage platform with folders, sharing, soft deletes, auth & dashboard UI."
-            tech={["Next.js","Express.js","Node.js", "PostgreSQL", "Prisma", "shadcn/ui", "Clerk","ImageKit"]}
+            tech={["Next.js","Express.js","TailwindCss" , "PostgreSQL", "Prisma", "shadcn/ui", "Clerk","ImageKit"]}
             github="https://github.com/cotishq/cloudnest"
             live="https://cloudnest-navy.vercel.app"
             status="completed"
