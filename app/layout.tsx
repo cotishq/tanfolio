@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import OnekoCat from "@/components/OnekoCat";
 import { Analytics } from '@vercel/analytics/react'
+import OnekoWrapper from "@/components/OnekoWrapper";
 
 
 const geistSans = Geist({
@@ -86,7 +87,7 @@ export default function RootLayout({
         >
           {children}
           <Analytics />
-          <OnekoCat />
+          <OnekoWrapper />
         </ThemeProvider>
       </body>
     </html>
