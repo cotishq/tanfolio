@@ -45,7 +45,7 @@ const About = () => {
           </a>
           <div>
             <h1 className="text-2xl md:text-3xl font-display text-primary tracking-wide">
-              TANISHQ
+              TANISHQ PATIL
             </h1>
             <a
               href="https://twitter.com/tanishqstwt"
