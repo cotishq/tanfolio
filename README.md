@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Tanfolio — [cotishq.xyz](https://cotishq.xyz)
 
-## Getting Started
+Welcome to my developer portfolio — designed with a focus on minimalism, smooth scroll, and clean layout.
 
-First, run the development server:
+Built with:
+- Next.js (App Router)
+- Tailwind CSS v4
+- shadcn/ui
+- Custom fonts, animations, and dark/light theme
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 Philosophy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Black & white. No distractions.  
+Just clean UI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Inspired by legends like [@meghtrix](https://x.com/meghtrix) & [@ramxcodes](https://x.com/ramxcodes).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Responsive design
+- Route transitions
+- Scroll-behavior smoothing
+- Font loading optimization
+- Dynamic OG image setup
+- Built with caffeine and chaos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛑 Please Read
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This repo is open for **learning and inspiration purposes only**.  
+If you're referencing it, please make it your own — clone the ideas, not the identity.  
+**Do not** use this code as-is for your personal portfolio or commercial projects.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📩 Contact
+
+If you found this helpful or want to connect:
+
+- Twitter/X: [@cotishq](https://x.com/tanishqstwt)
+- Portfolio: [cotishq.xyz](https://cotishq.xyz)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**, with the above usage guideline in good faith.
+
