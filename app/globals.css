@@ -176,3 +176,16 @@ html {
   overscroll-behavior: none; 
 }
 
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

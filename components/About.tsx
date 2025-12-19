@@ -36,7 +36,7 @@ const About = () => {
             style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}
           >
             <Image
-              src="/profilepictwt.jpg"
+              src="/new pfp.jpg"
               alt="Tanishq Avatar"
               width={60}
               height={60}
