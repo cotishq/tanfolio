@@ -5,10 +5,7 @@ import { PiHandbag } from "react-icons/pi";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="pt-24 pb-12 px-6 bg-background text-foreground"
-    >
+    <section id="about" className="space-y-4 font-body">
       <style jsx>{`
         @keyframes fadeIn {
           from {
@@ -24,7 +21,6 @@ const About = () => {
           animation: fadeIn 0.8s ease-out;
         }
       `}</style>
-      <div className="max-w-2xl w-full flex flex-col items-start text-left space-y-4 font-body">
         
         
         <div className="flex items-center space-x-3">
@@ -149,9 +145,7 @@ const About = () => {
           </div>
         </div>
 
-        <Separator />
-
-      </div>
+      <Separator />
     </section>
   );
 };

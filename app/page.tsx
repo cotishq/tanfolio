@@ -10,24 +10,21 @@ import { Quote } from "@/components/Quote";
 
 import Skills from "@/components/Skills";
 
-
-
 export default function Home() {
   return (
-    <div>
-      
+    <div className="min-h-screen">
       <FixedModeToggle />
       <LocalTime />
 
-      
-      <div className="w-full flex flex-col items-center">
+      <main className="w-full max-w-4xl mx-auto px-6 py-24 space-y-24">
         <About />
         <Skills />
-        <Projects /> 
-        <Blogs />    
+        <Projects />
+        <Blogs />
         <Quote />
-        <Footer />
-      </div>
+      </main>
+      
+      <Footer />
     </div>
   );
 }

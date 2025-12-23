@@ -6,7 +6,7 @@ import { SiLeetcode } from "react-icons/si"
 
 export const Footer = () => {
     return (
-        <footer className="py-10 text-sm text-muted-foreground text-center">
+        <footer className="w-full max-w-4xl mx-auto px-6 py-16 text-sm text-muted-foreground text-center">
             <p className="mb-2 font-mono text-red-500 font-display tracking-wide hover:text-red-400 transition-colors duration-300">
                 cotishq.dev
             </p>
