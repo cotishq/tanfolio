@@ -28,7 +28,7 @@ export default function Projects() {
         </div>
         
         <ProjectCard
-          image="/og.png"
+          image="/cottorrent.png"
           title="CotTorrent"
           description="A BitTorrent client written in Go implementing core protocol features, magnet links, metadata exchange (BEP 9/10), and peer-to-peer communication."
           tech={["Go", "BitTorrent", "TCP/UDP", "CLI"]}
