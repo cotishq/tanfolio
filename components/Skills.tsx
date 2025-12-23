@@ -17,7 +17,8 @@ import {
   SiDrizzle, 
   SiFigma, 
   SiWeb3Dotjs, 
-  SiClerk 
+  SiClerk, 
+  SiGo
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { SkillBadge } from "./Skillbadge";
@@ -45,8 +46,10 @@ const Skills = () => {
               <SkillBadge name="CSS" icon={<SiCss3 />} />
               <SkillBadge name="JavaScript" icon={<SiJavascript />} />
               <SkillBadge name="TypeScript" icon={<SiTypescript />} />
+              <SkillBadge name="Go" icon={<SiGo />} />
               <SkillBadge name="Rust" icon={<SiRust />} />
               <SkillBadge name="Java" icon={<FaJava />} />
+              
             </div>
           </div>
 

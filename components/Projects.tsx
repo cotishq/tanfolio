@@ -1,5 +1,4 @@
 import { ProjectCard } from "@/components/ProjectCard";
-import { ComingSoonCard } from "@/components/ComingSoonCard";
 
 
 export default function Projects() {
@@ -28,7 +27,15 @@ export default function Projects() {
           />
         </div>
         
-        <ComingSoonCard />
+        <ProjectCard
+          image="/og.png"
+          title="CotTorrent"
+          description="A BitTorrent client written in Go implementing core protocol features, magnet links, metadata exchange (BEP 9/10), and peer-to-peer communication."
+          tech={["Go", "BitTorrent", "TCP/UDP", "CLI"]}
+          github="https://github.com/cotishq/cottorrent"
+          live=""
+          status="completed"
+        />
         
       </div>
     </section>

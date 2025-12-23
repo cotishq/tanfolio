@@ -1,5 +1,4 @@
-import { Github, ExternalLink, Code, Database, Shield, Globe } from "lucide-react";
-import { Badge } from "./ui/badge";
+import { Github, ExternalLink, Code, Database, Shield, Globe, Terminal, Network } from "lucide-react";
 
 const techIcons : {[key: string] : any} = {
   "Next.js": Code,
@@ -12,7 +11,11 @@ const techIcons : {[key: string] : any} = {
   "ImageKit": Globe,
   "React": Code,
   "TypeScript": Code,
-  "TailwindCss": Code
+  "TailwindCss": Code,
+  "Go": Terminal,
+  "BitTorrent": Network,
+  "TCP/UDP": Network,
+  "CLI": Terminal
 };
 
 
