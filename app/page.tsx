@@ -8,6 +8,8 @@ import { FixedModeToggle } from "@/components/ModeToggle";
 import Projects from "@/components/Projects";
 import { Quote } from "@/components/Quote";
 
+import WorkExperience from "@/components/WorkExperience";
+
 import Skills from "@/components/Skills";
 
 export default function Home() {
@@ -18,12 +20,13 @@ export default function Home() {
 
       <main className="w-full max-w-4xl mx-auto px-6 py-24 space-y-24">
         <About />
+        <WorkExperience />
         <Skills />
         <Projects />
         <Blogs />
         <Quote />
       </main>
-      
+
       <Footer />
     </div>
   );
