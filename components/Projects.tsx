@@ -15,7 +15,7 @@ export default function Projects() {
           image="/og.png"
           title="CloudNest"
           description="A modern file storage platform with folders, sharing, soft deletes, auth & dashboard UI."
-          tech={["Next.js","Express.js","TailwindCss" , "PostgreSQL", "Prisma", "shadcn/ui", "Clerk","ImageKit"]}
+          tech={["Next.js", "Express.js", "TailwindCss", "PostgreSQL", "Prisma", "shadcn/ui", "Clerk", "ImageKit"]}
           github="https://github.com/cotishq/cloudnest"
           live="https://cloudnest-navy.vercel.app"
           status="completed"
@@ -26,6 +26,15 @@ export default function Projects() {
           description="A BitTorrent client written in Go implementing core protocol features, magnet links, metadata exchange (BEP 9/10), and peer-to-peer communication."
           tech={["Go", "BitTorrent", "TCP/UDP", "CLI"]}
           github="https://github.com/cotishq/cottorrent"
+          live=""
+          status="completed"
+        />
+        <ProjectCard
+          image="/rustis.png"
+          title="Rustis"
+          description="A Redis clone built from scratch in Rust. This project implements core Redis functionality including data structures, persistence, replication, pub/sub messaging, and more."
+          tech={["Rust", "Tokio", "RESP", "Redis"]}
+          github="https://github.com/cotishq/Rustis"
           live=""
           status="completed"
         />

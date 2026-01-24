@@ -1,6 +1,6 @@
 import { Github, ExternalLink, Code, Database, Shield, Globe, Terminal, Network } from "lucide-react";
 
-const techIcons : {[key: string] : any} = {
+const techIcons: { [key: string]: any } = {
   "Next.js": Code,
   "Express.js": Code,
   "Node.js": Code,
@@ -26,24 +26,30 @@ type Props = {
   tech: string[];
   github: string;
   live: string;
-  status : string
+  status: string
 };
 
-export function ProjectCard({ image, title, description, tech, github, live , status = "completed" }: Props) {
+export function ProjectCard({ image, title, description, tech, github, live, status = "completed" }: Props) {
   return (
     <div className="group relative overflow-hidden rounded-xl border bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5 h-full">
-      
+
       <div className="relative overflow-hidden">
-        <img 
-          src={image} 
-          alt={title}
-          className="w-full h-48 sm:h-52 md:h-60 object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-48 sm:h-52 md:h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-48 sm:h-52 md:h-60 bg-muted/20 flex items-center justify-center">
+            <Code size={48} className="text-muted-foreground/20" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
+
         <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
           {github && (
-            <a 
+            <a
               href={github}
               className="p-2 bg-background/80 backdrop-blur-sm rounded-lg hover:bg-background transition-colors"
               target="_blank"
@@ -53,7 +59,7 @@ export function ProjectCard({ image, title, description, tech, github, live , st
             </a>
           )}
           {live && (
-            <a 
+            <a
               href={live}
               className="p-2 bg-primary/80 backdrop-blur-sm rounded-lg hover:bg-primary transition-colors text-primary-foreground"
               target="_blank"
@@ -66,11 +72,10 @@ export function ProjectCard({ image, title, description, tech, github, live , st
 
         {status && (
           <div className="absolute bottom-3 left-3">
-            <div className={`px-2 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
-              status === "completed" 
-                ? "bg-green-500/20 text-green-400 border border-green-500/30" 
+            <div className={`px-2 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${status === "completed"
+                ? "bg-green-500/20 text-green-400 border border-green-500/30"
                 : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
-            }`}>
+              }`}>
               {status === "completed" ? "Live" : "In Progress"}
             </div>
           </div>
@@ -89,7 +94,7 @@ export function ProjectCard({ image, title, description, tech, github, live , st
           {tech.map((item, index) => {
             const Icon = techIcons[item];
             return (
-              <div 
+              <div
                 key={index}
                 className="flex items-center gap-1 px-2 py-1 bg-muted/50 rounded-md text-xs font-medium hover:bg-muted transition-colors"
               >
@@ -98,12 +103,12 @@ export function ProjectCard({ image, title, description, tech, github, live , st
               </div>
             );
           })}
-          
+
         </div>
 
         <div className="flex gap-3 pt-3 border-t border-border/50">
           {github && (
-            <a 
+            <a
               href={github}
               className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
               target="_blank"
@@ -114,7 +119,7 @@ export function ProjectCard({ image, title, description, tech, github, live , st
             </a>
           )}
           {live && (
-            <a 
+            <a
               href={live}
               className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
               target="_blank"
