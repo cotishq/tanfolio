@@ -12,6 +12,15 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ProjectCard
+          image=""
+          title="Shipyard"
+          description="An MVP deployment orchestration platform for static sites with containerized builds, FIFO retries, MinIO artifact storage, logs/status APIs, and deployment serving by ID."
+          tech={["Go", "Echo v5", "PostgreSQL", "MinIO", "Docker", "NGINX"]}
+          github="https://github.com/cotishq/shipyard"
+          live=""
+          status="completed"
+        />
+        <ProjectCard
           image="/og.png"
           title="CloudNest"
           description="A modern file storage platform with folders, sharing, soft deletes, auth & dashboard UI."
