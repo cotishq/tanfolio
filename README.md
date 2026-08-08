@@ -10,7 +10,7 @@ Built with:
 
 ---
 
-## 🧠 Philosophy
+## Philosophy
 
 Black & white. No distractions.  
 Just clean UI
@@ -19,7 +19,7 @@ Inspired by legends like [@meghtrix](https://x.com/meghtrix) & [@ramxcodes](http
 
 ---
 
-## 🛠️ Features
+## Features
 
 - Responsive design
 - Route transitions
@@ -30,7 +30,7 @@ Inspired by legends like [@meghtrix](https://x.com/meghtrix) & [@ramxcodes](http
 
 ---
 
-## 🛑 Please Read
+## Please Read
 
 This repo is open for **learning and inspiration purposes only**.  
 If you're referencing it, please make it your own — clone the ideas, not the identity.  
@@ -38,7 +38,7 @@ If you're referencing it, please make it your own — clone the ideas, not the i
 
 ---
 
-## 📩 Contact
+## Contact
 
 If you found this helpful or want to connect:
 
@@ -47,7 +47,7 @@ If you found this helpful or want to connect:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the **MIT License**, with the above usage guideline in good faith.
 
