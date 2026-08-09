@@ -1,4 +1,4 @@
-#  Tanfolio — [cotishq.xyz](https://cotishq.xyz)
+#  Tanfolio — [tanishqlabs.in](https://www.tanishqlabs.in/)
 
 Welcome to my developer portfolio — designed with a focus on minimalism, smooth scroll, and clean layout.
 
@@ -43,7 +43,7 @@ If you're referencing it, please make it your own — clone the ideas, not the i
 If you found this helpful or want to connect:
 
 - Twitter/X: [@cotishq](https://x.com/tanishqstwt)
-- Portfolio: [cotishq.xyz](https://cotishq.xyz)
+- Portfolio: [tanishqlabs.in](https://www.tanishqlabs.in/)
 
 ---
 
