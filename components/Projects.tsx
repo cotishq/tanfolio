@@ -12,29 +12,20 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ProjectCard
+          image="/kronos2.png"
+          title="Kronos"
+          description="A distributed event processing pipeline built in Go - featuring gRPC ingestion, Kafka fan-out, multiple consumers, and GitOps-driven deployment on Kubernetes with full observability."
+          tech={["Go", "gRPC", "Kafka", "Kubernetes", "Helm", "ArgoCD", "Prometheus"]}
+          github="https://github.com/cotishq/kronos"
+          live=""
+          status="completed"
+        />
+        <ProjectCard
           image="/shipyard.jpg"
           title="Shipyard"
           description="An MVP deployment orchestration platform for static sites with containerized builds, FIFO retries, MinIO artifact storage, logs/status APIs, and deployment serving by ID."
           tech={["Go", "Echo v5", "PostgreSQL", "MinIO", "Docker", "NGINX"]}
           github="https://github.com/cotishq/shipyard"
-          live=""
-          status="completed"
-        />
-        <ProjectCard
-          image="/og.png"
-          title="CloudNest"
-          description="A modern file storage platform with folders, sharing, soft deletes, auth & dashboard UI."
-          tech={["Next.js", "Express.js", "TailwindCss", "PostgreSQL", "Prisma", "shadcn/ui", "Clerk", "ImageKit"]}
-          github="https://github.com/cotishq/cloudnest"
-          live="https://cloudnest-navy.vercel.app"
-          status="completed"
-        />
-        <ProjectCard
-          image="/cottorrent.png"
-          title="CotTorrent"
-          description="A BitTorrent client written in Go implementing core protocol features, magnet links, metadata exchange (BEP 9/10), and peer-to-peer communication."
-          tech={["Go", "BitTorrent", "TCP/UDP", "CLI"]}
-          github="https://github.com/cotishq/cottorrent"
           live=""
           status="completed"
         />
@@ -47,6 +38,15 @@ export default function Projects() {
           live=""
           status="completed"
         />
+        <ProjectCard
+          image="/og.png"
+          title="CloudNest"
+          description="A modern file storage platform with folders, sharing, soft deletes, auth & dashboard UI."
+          tech={["Next.js", "Express.js", "TailwindCss", "PostgreSQL", "Prisma", "shadcn/ui", "Clerk", "ImageKit"]}
+          github="https://github.com/cotishq/cloudnest"
+          live="https://cloudnest-navy.vercel.app"
+          status="completed"
+        /> 
       </div>
     </section>
   );

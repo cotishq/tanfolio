@@ -1,3 +1,3 @@
 export const catConfig = {
-  enabled: true, 
+  enabled: false, 
 };
