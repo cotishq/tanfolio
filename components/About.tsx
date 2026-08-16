@@ -59,7 +59,7 @@ const About = () => {
 
       <div className="space-y-2 text-sm md:text-base leading-relaxed">
         <p>
-          I write <strong>Go</strong>, break <strong>distributed systems</strong>, and spend way too much time in <strong>Kubernetes</strong> and <strong>Linux internals</strong>.
+          I write <strong>Go</strong> (mostly), break <strong>distributed systems</strong>, and spend way too much time in <strong>Kubernetes</strong> and <strong>Linux internals</strong>.
         </p>
         <p>
           <strong>Open source</strong> is where most of my serious work lives.
