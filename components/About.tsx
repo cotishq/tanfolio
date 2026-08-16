@@ -59,15 +59,10 @@ const About = () => {
 
       <div className="space-y-2 text-sm md:text-base leading-relaxed">
         <p>
-          I'm <strong>Tanishq</strong>, a developer who enjoys building things that work and occasionally{" "}
-          <span className="text-red-400">(breaking)</span> them to learn why they don't.
+          I write <strong>Go</strong>, break <strong>distributed systems</strong>, and spend way too much time in <strong>Kubernetes</strong> and <strong>Linux internals</strong>.
         </p>
         <p>
-          I like working <strong>across the stack</strong> — blending design with development to craft clean,
-          functional, and fast experiences.
-        </p>
-        <p>
-          When I'm <strong>not on keyboard</strong>, you'll probably find me at gym or catching up on some much needed sleep.
+          <strong>Open source</strong> is where most of my serious work lives.
         </p>
         <p>
           I'm currently available for internships, full-time opportunities, and freelance projects. If you're looking for someone passionate, skilled, and ready to contribute, I'm here to help bring your ideas to life!
