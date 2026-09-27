@@ -5,9 +5,9 @@ type SkillBadgeProps = {
 
 export const SkillBadge = ({ name, icon }: SkillBadgeProps) => {
   return (
-    <div className="inline-flex items-center px-3 py-1 rounded-md bg-muted text-sm font-medium text-foreground gap-2 border border-muted-foreground/20">
+    <span className="flex h-6 items-center gap-1.5 rounded-full border border-line bg-muted/40 px-2 font-code text-xs text-foreground [&_svg]:size-3.5 [&_svg]:shrink-0 [&_svg]:text-muted-foreground">
       {icon}
       {name}
-    </div>
+    </span>
   );
 };

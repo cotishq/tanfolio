@@ -39,6 +39,7 @@
   --sidebar-accent-foreground : oklch(0.205 0 0);
   --sidebar-border : oklch(0.922 0 0);
   --sidebar-ring : oklch(0.708 0 0);
+  --line : color-mix(in oklab, var(--border) 64%, var(--background));
 }
 
 @theme inline {
@@ -62,6 +63,7 @@
   --color-ring : var(--ring);
   --color-input : var(--input);
   --color-border : var(--border);
+  --color-line : var(--line);
   --color-destructive : var(--destructive);
   --color-accent-foreground : var(--accent-foreground);
   --color-accent : var(--accent);
@@ -86,6 +88,35 @@ body {
   
 }
 
+@utility screen-line-top {
+  @apply relative;
+  &:before {
+    content: "";
+    @apply absolute top-0 left-[-100vw] -z-1 h-px w-[200vw] bg-line;
+  }
+}
+
+@utility screen-line-bottom {
+  @apply relative;
+  &:after {
+    content: "";
+    @apply absolute bottom-0 left-[-100vw] -z-1 h-px w-[200vw] bg-line;
+  }
+}
+
+@utility screen-line-top-none {
+  @apply before:content-none;
+}
+
+@utility screen-line-bottom-none {
+  @apply after:content-none;
+}
+
+@utility diagonal-stripes {
+  @apply [--pattern-foreground:var(--color-line)];
+  @apply bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px];
+}
+
 @layer base {
   .font-display {
     font-family: var(--font-display);
@@ -93,6 +124,10 @@ body {
 
   .font-body {
     font-family: var(--font-body);
+  }
+
+  .font-code {
+    font-family: var(--font-geist-mono), monospace;
   }
 }
 
@@ -159,6 +194,8 @@ body {
   --sidebar-border : oklch(1 0 0 / 10%);
 
   --sidebar-ring : oklch(0.556 0 0);
+
+  --line : color-mix(in oklab, oklch(1 0 0) 12%, var(--background));
 }
 
 @layer base {
@@ -177,7 +214,7 @@ html {
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 

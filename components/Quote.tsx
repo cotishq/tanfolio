@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { quotes } from '@/config/Quote';
+import { Panel } from './Panel';
 
 export const Quote = () => {
   const [currentQuote, setCurrentQuote] = useState<{
@@ -23,11 +24,11 @@ export const Quote = () => {
   const { quote, author } = currentQuote;
 
   return (
-    <section id="quote">
+    <Panel id="quote">
       <div
-        className={`relative w-full px-8 py-8 border border-border rounded-2xl bg-muted/20 dark:bg-muted/10 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-500 ease-out transform ${
+        className={`relative w-full px-8 py-8 transition-all duration-500 ease-out transform ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-        } hover:scale-[1.01] group`}
+        } group`}
       >
         <svg
           aria-hidden="true"
@@ -48,8 +49,8 @@ export const Quote = () => {
           </footer>
         </blockquote>
         
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       </div>
-    </section>
+    </Panel>
   );
 };

@@ -1,21 +1,24 @@
 import React from 'react';
+import { Panel, PanelContent, PanelDescription, PanelHeader, PanelTitle } from './Panel';
 
 const Blogs = () => {
   return (
-    <section id="blog">
-      <div className="mb-8">
-        <h2 className="text-2xl font-display border-b border-neutral-300 dark:border-white/10 pb-2 mb-3">Blogs & Notes</h2>
-        <p className="font-body leading-relaxed">
-          Currently drafting thoughts, dev notes, and breakdowns. Stay tuned for upcoming technical write-ups 
+    <Panel id="blog" className="font-body">
+      <PanelHeader>
+        <PanelTitle>
+          <a href="#blog">Blogs &amp; Notes</a>
+        </PanelTitle>
+        <PanelDescription>
+          Currently drafting thoughts, dev notes, and breakdowns. Stay tuned for upcoming technical write-ups
           and insights from my journey.
-        </p>
-      </div>
+        </PanelDescription>
+      </PanelHeader>
 
-      <div className="flex items-center gap-2 text-sm text-gray-500">
+      <PanelContent className="flex items-center gap-2 text-sm text-muted-foreground">
         <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
         Writing in Progress...
-      </div>
-    </section>
+      </PanelContent>
+    </Panel>
   );
 };
 

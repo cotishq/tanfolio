@@ -1,53 +1,75 @@
-import { ProjectCard } from "@/components/ProjectCard";
+import { Box, ChevronsUpDown, Github, Link as LinkIcon } from "lucide-react";
+import { PROJECTS, type Project } from "@/config/projects";
+import { Panel, PanelDescription, PanelHeader, PanelTitle, PanelTitleSup } from "./Panel";
+import { IconTile, Tag } from "./Tag";
 
 export default function Projects() {
   return (
-    <section id="projects">
-      <div className="mb-8">
-        <h2 className="text-2xl font-display border-b border-neutral-300 dark:border-white/10 pb-2 mb-3">Proof of Work</h2>
-        <p className="text-muted-foreground font-body">
-          Proudly presenting the code that didn't crash. Mostly
-        </p>
-      </div>
+    <Panel id="projects" className="font-body">
+      <PanelHeader>
+        <PanelTitle>
+          <a href="#projects">Projects</a>
+          <PanelTitleSup>({PROJECTS.length})</PanelTitleSup>
+        </PanelTitle>
+        <PanelDescription>Proudly presenting the code that didn&apos;t crash. Mostly</PanelDescription>
+      </PanelHeader>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ProjectCard
-          image="/kronos2.png"
-          title="Kronos"
-          description="A distributed event processing pipeline built in Go - featuring gRPC ingestion, Kafka fan-out, multiple consumers, and GitOps-driven deployment on Kubernetes with full observability."
-          tech={["Go", "gRPC", "Kafka", "Kubernetes", "Helm", "ArgoCD", "Prometheus"]}
-          github="https://github.com/cotishq/kronos"
-          live=""
-          status="completed"
-        />
-        <ProjectCard
-          image="/shipyard.jpg"
-          title="Shipyard"
-          description="An MVP deployment orchestration platform for static sites with containerized builds, FIFO retries, MinIO artifact storage, logs/status APIs, and deployment serving by ID."
-          tech={["Go", "Echo v5", "PostgreSQL", "MinIO", "Docker", "NGINX"]}
-          github="https://github.com/cotishq/shipyard"
-          live=""
-          status="completed"
-        />
-        <ProjectCard
-          image="/rustis.png"
-          title="Rustis"
-          description="A Redis clone built from scratch in Rust. This project implements core Redis functionality including data structures, persistence, replication, pub/sub messaging, and more."
-          tech={["Rust", "Tokio", "RESP", "Redis"]}
-          github="https://github.com/cotishq/Rustis"
-          live=""
-          status="completed"
-        />
-        <ProjectCard
-          image="/og.png"
-          title="CloudNest"
-          description="A modern file storage platform with folders, sharing, soft deletes, auth & dashboard UI."
-          tech={["Next.js", "Express.js", "TailwindCss", "PostgreSQL", "Prisma", "shadcn/ui", "Clerk", "ImageKit"]}
-          github="https://github.com/cotishq/cloudnest"
-          live="https://cloudnest-navy.vercel.app"
-          status="completed"
-        /> 
+      <div>
+        {PROJECTS.map((project) => (
+          <ProjectItem key={project.title} project={project} />
+        ))}
       </div>
-    </section>
+    </Panel>
+  );
+}
+
+function ProjectItem({ project }: { project: Project }) {
+  return (
+    <div className="border-b border-line last:border-none">
+      <details className="group" open={project.isExpanded}>
+        <summary className="flex cursor-pointer list-none items-center hover:bg-muted/30 [&::-webkit-details-marker]:hidden">
+          <IconTile className="mx-4">
+            <Box />
+          </IconTile>
+
+          <div className="flex flex-1 items-center gap-3 border-l border-dashed border-line p-4">
+            <div className="flex-1">
+              <h3 className="mb-0.5 text-lg leading-snug font-medium">{project.title}</h3>
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                <span
+                  className={`size-1.5 rounded-full ${project.status === "completed" ? "bg-green-500" : "bg-yellow-500"}`}
+                  aria-hidden
+                />
+                {project.status === "completed" ? "Completed" : "Under active development"}
+                {project.period && <span className="tabular-nums">· {project.period}</span>}
+              </p>
+            </div>
+
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} source code`} className="text-muted-foreground hover:text-foreground">
+                <Github className="size-4" />
+              </a>
+            )}
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title}`} className="text-muted-foreground hover:text-foreground">
+                <LinkIcon className="size-4" />
+              </a>
+            )}
+            <ChevronsUpDown className="size-4 shrink-0 text-muted-foreground" aria-hidden />
+          </div>
+        </summary>
+
+        <div className="space-y-4 border-t border-line p-4">
+          <p className="text-sm leading-relaxed text-muted-foreground md:text-base">{project.description}</p>
+          <ul className="flex flex-wrap gap-1.5">
+            {project.tech.map((item) => (
+              <li key={item} className="flex">
+                <Tag>{item}</Tag>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
+    </div>
   );
 }

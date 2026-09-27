@@ -1,12 +1,11 @@
 "use client";
 import Image from "next/image";
-import { Separator } from "./ui/separator";
 import { PiHandbag } from "react-icons/pi";
-import GithubHeatmap from "./GithubHeatmap";
+import { Panel } from "./Panel";
 
 const About = () => {
   return (
-    <section id="about" className="space-y-4 font-body">
+    <Panel id="about" className="font-body">
       <style jsx>{`
         @keyframes fadeIn {
           from {
@@ -24,7 +23,7 @@ const About = () => {
       `}</style>
 
 
-      <div className="flex items-center space-x-3">
+      <div className="screen-line-bottom flex items-center space-x-3 p-4">
         <a
           href="https://github.com/cotishq"
           target="_blank"
@@ -57,6 +56,7 @@ const About = () => {
       </div>
 
 
+      <div className="screen-line-bottom space-y-4 p-4">
       <div className="space-y-2 text-sm md:text-base leading-relaxed">
         <p>
           I write <strong>Go</strong> (mostly), break <strong>distributed systems</strong>, and spend way too much time in <strong>Kubernetes</strong> and <strong>Linux internals</strong>.
@@ -86,12 +86,9 @@ const About = () => {
           Deploy me
         </a>
       </div>
+      </div>
 
-
-      <Separator className="my-2" />
-
-
-      <div className="w-full">
+      <div className="w-full p-4">
         <p className="text-xs text-muted-foreground mb-1.5">
           Where you can Connect with Me (ofcourse digitally)
         </p>
@@ -140,13 +137,7 @@ const About = () => {
           </a>
         </div>
       </div>
-
-      <Separator className="my-2" />
-
-      <GithubHeatmap />
-
-      <Separator />
-    </section>
+    </Panel>
   );
 };
 
