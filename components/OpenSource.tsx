@@ -1,16 +1,14 @@
-import { ArrowUpRight, GitMerge, GitPullRequest } from "lucide-react";
+import { ArrowUpRight, ChevronsUpDown, GitMerge, GitPullRequest, GitPullRequestClosed } from "lucide-react";
 import { OPEN_SOURCE, type OpenSourceContribution } from "@/config/openSource";
 import { Panel, PanelDescription, PanelHeader, PanelTitle, PanelTitleSup } from "./Panel";
 
 export default function OpenSource() {
-  const totalPrs = OPEN_SOURCE.reduce((sum, c) => sum + c.prs.length, 0);
-
   return (
     <Panel id="open-source" className="font-body">
       <PanelHeader>
         <PanelTitle>
           <a href="#open-source">Open Source</a>
-          {totalPrs > 0 && <PanelTitleSup>({totalPrs})</PanelTitleSup>}
+          {OPEN_SOURCE.length > 0 && <PanelTitleSup>({OPEN_SOURCE.length})</PanelTitleSup>}
         </PanelTitle>
         <PanelDescription>Where most of my serious work lives.</PanelDescription>
       </PanelHeader>
@@ -36,31 +34,39 @@ function ContributionItem({ contribution }: { contribution: OpenSourceContributi
 
   return (
     <div className="border-b border-line last:border-none">
-      <div className="flex items-center">
+      <details className="group">
+      <summary className="flex cursor-pointer list-none items-center hover:bg-muted/30 [&::-webkit-details-marker]:hidden">
         <span className="mx-4 flex size-6 shrink-0 items-center justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`https://github.com/${owner}.png?size=48`}
+            src={contribution.logo ?? `https://github.com/${owner}.png?size=48`}
             alt=""
-            className="size-6 rounded-md border border-line"
+            className={`size-6 rounded-md object-contain ${contribution.invertLogoInLight ? "invert dark:invert-0" : ""} ${contribution.invertLogoInDark ? "dark:invert" : ""} ${contribution.logo ? "" : "border border-line"}`}
             loading="lazy"
           />
         </span>
-        <div className="flex-1 border-l border-dashed border-line p-4">
+        <div className="flex flex-1 items-center gap-3 border-l border-dashed border-line p-4">
+          <div className="flex-1">
+            <h3 className="text-lg leading-snug font-medium">{contribution.title ?? contribution.repo}</h3>
+            {contribution.role && (
+              <p className="text-sm text-muted-foreground">{contribution.role}</p>
+            )}
+            {contribution.description && (
+              <p className="text-sm text-muted-foreground">{contribution.description}</p>
+            )}
+          </div>
           <a
             href={`https://github.com/${contribution.repo}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1 text-lg leading-snug font-medium hover:underline underline-offset-4"
+            aria-label={`${contribution.title ?? contribution.repo} on GitHub`}
+            className="text-muted-foreground hover:text-foreground"
           >
-            {contribution.repo}
-            <ArrowUpRight className="size-4 text-muted-foreground group-hover:text-foreground" />
+            <ArrowUpRight className="size-4" />
           </a>
-          {contribution.description && (
-            <p className="text-sm text-muted-foreground">{contribution.description}</p>
-          )}
+          <ChevronsUpDown className="size-4 shrink-0 text-muted-foreground" aria-hidden />
         </div>
-      </div>
+      </summary>
 
       <ul className="border-t border-line">
         {contribution.prs.map((pr) => (
@@ -68,6 +74,8 @@ function ContributionItem({ contribution }: { contribution: OpenSourceContributi
             <span className="mx-4 flex size-6 shrink-0 items-center justify-center">
               {pr.status === "merged" ? (
                 <GitMerge className="size-4 text-purple-400" aria-label="Merged" />
+              ) : pr.status === "closed" ? (
+                <GitPullRequestClosed className="size-4 text-red-400" aria-label="Closed" />
               ) : (
                 <GitPullRequest className="size-4 text-green-500" aria-label="Open" />
               )}
@@ -86,6 +94,7 @@ function ContributionItem({ contribution }: { contribution: OpenSourceContributi
           </li>
         ))}
       </ul>
+      </details>
     </div>
   );
 }
