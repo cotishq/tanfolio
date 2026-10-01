@@ -13,7 +13,7 @@ import WorkExperience from "@/components/WorkExperience";
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-clip">
+    <div className="relative min-h-screen overflow-x-clip">
       <FixedModeToggle />
       <LocalTime />
 

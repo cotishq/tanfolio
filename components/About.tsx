@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
+import { FileText } from "lucide-react";
 import { Panel } from "./Panel";
 
 const About = () => {
@@ -67,6 +69,14 @@ const About = () => {
           Available for full-time, contract, and internships in <strong>SWE</strong>, <strong>SRE</strong>, and <strong>DevRel</strong>. I debug in public, apologize in writing, and call that a career.
         </p>
       </div>
+
+      <Link
+        href="/resume"
+        className="inline-flex items-center gap-2 border border-line px-3 py-2 text-sm hover:bg-muted/40"
+      >
+        <FileText className="size-3.5" />
+        Resume
+      </Link>
       </div>
 
       <div className="w-full p-4">

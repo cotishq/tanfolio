@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { clearInterval } from "timers";
 
 const LocalTime = () => {
     const [time , setTime] = useState("");
@@ -25,7 +24,7 @@ const LocalTime = () => {
     } , []);
 
     return(
-        <div className="fixed top-4 left-4 text-sm md:text-sm text-muted-foreground font-display z-50 select-none" >
+        <div className="absolute top-4 left-4 z-50 text-sm text-muted-foreground font-display select-none lg:fixed" >
             IN {time}
         </div>
     )

@@ -34,6 +34,10 @@ const pr = (
 const HARBOR = "container-registry/harbor-satellite";
 const SWARM = "sugar-org/swarm-external-secrets";
 const HAMI = "Project-HAMi/HAMi";
+const OLAKE = "datazip-inc/olake";
+const MICROCKS = "microcks/microcks-cli";
+const TALAWA = "PalisadoesFoundation/talawa-admin";
+const KARMADA = "karmada-io/karmada";
 
 export const OPEN_SOURCE: OpenSourceContribution[] = [
   {
@@ -80,4 +84,62 @@ export const OPEN_SOURCE: OpenSourceContribution[] = [
       pr(HAMI, 2293, "fix: release node lock on allocate response failure", "merged"),
     ],
   },
+  {
+    repo: OLAKE,
+    title: "olake",
+    description: "Replicates databases, Kafka, and S3 into Apache Iceberg.",
+    logo: "/olake.png",
+    invertLogoInLight: true,
+    prs: [
+      pr(OLAKE, 1058, "fix: move RetryCount default to config.Validate() across all drivers", "open"),
+      pr(OLAKE, 1039, "feat: optional schema discovery and stream validation during sync", "merged"),
+    ],
+  },
+  {
+    repo: MICROCKS,
+    title: "microcks",
+    description: "A CLI for interacting with Microcks test APIs.",
+    logo: "/microcks.png",
+    prs: [
+      pr(MICROCKS, 508, "fix: add missing copyright header to rand_test.go", "merged"),
+      pr(MICROCKS, 261, "docs: fix small typo in available commands", "merged"),
+    ],
+  },
+  {
+    repo: TALAWA,
+    title: "palisadoes",
+    description: "Admin portal for the Talawa mobile app.",
+    logo: "/palisadoes.png",
+    prs: [
+      pr(TALAWA, 7203, "fix: resolve ui issues,add currency-aware-donation fallback and migrate history to DataTable", "merged"),
+      pr(TALAWA, 7168, "test(organizations): add code-coverage tests and simplify unreachable conditionals", "merged"),
+      pr(TALAWA, 7159, "tests/improve code coverage for UserPortalNavigationBarMocks.ts", "merged"),
+      pr(TALAWA, 7135, "test(verify-email): remove redundant return and cover verificationFailed fallback branch", "merged"),
+      pr(TALAWA, 7088, "chore: remove unused UserListCard component", "merged"),
+      pr(TALAWA, 6812, "fix(chat): improve chat-ui/ux and fix admin-modal z-index", "merged"),
+      pr(TALAWA, 6580, "feat: add common shell utilities library for install scripts", "merged"),
+      pr(TALAWA, 6475, "feat: add Storybook stories for CRUDModalTemplate components", "merged"),
+      pr(TALAWA, 6404, "test(Groups): achieve 100% coverage for Groups.tsx by fixing leader search test", "merged"),
+      pr(TALAWA, 6397, "test(CampaignModal): add tests for null date handling to achieve 100% coverage", "merged"),
+      pr(TALAWA, 6370, "Refactor/avatar as a shared component", "merged"),
+      pr(TALAWA, 6296, "fix(setup): add JSDoc, extract env constants and simplify logic", "merged"),
+    ],
+  },
+  {
+    repo: KARMADA,
+    title: "karmada",
+    description: "Multi-cluster Kubernetes orchestration.",
+    logo: "/karmada.png",
+    prs: [
+      pr(KARMADA, 7420, "Automated cherry pick of #7394: fix: record schedule result correctly in the event", "merged"),
+      pr(KARMADA, 7419, "Automated cherry pick of #7394: fix: record schedule result correctly in the event", "merged"),
+      pr(KARMADA, 7418, "Automated cherry pick of #7394: fix: record schedule result correctly in the event", "merged"),
+    ],
+  },
 ];
+
+const FEATURED = [HARBOR, OLAKE, HAMI];
+
+export const FEATURED_OPEN_SOURCE = FEATURED.map(
+  (repo) => OPEN_SOURCE.find((contribution) => contribution.repo === repo)!
+);

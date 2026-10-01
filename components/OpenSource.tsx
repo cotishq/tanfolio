@@ -1,26 +1,46 @@
+import Link from "next/link";
 import { ArrowUpRight, ChevronsUpDown, GitMerge, GitPullRequest, GitPullRequestClosed } from "lucide-react";
-import { OPEN_SOURCE, type OpenSourceContribution } from "@/config/openSource";
+import { FEATURED_OPEN_SOURCE, type OpenSourceContribution } from "@/config/openSource";
 import { Panel, PanelDescription, PanelHeader, PanelTitle, PanelTitleSup } from "./Panel";
 
-export default function OpenSource() {
+export default function OpenSource({
+  contributions = FEATURED_OPEN_SOURCE,
+  id = "open-source",
+  homeLink = false,
+}: {
+  contributions?: OpenSourceContribution[];
+  id?: string;
+  homeLink?: boolean;
+}) {
   return (
-    <Panel id="open-source" className="font-body">
+    <Panel id={id} className="font-body">
       <PanelHeader>
-        <PanelTitle>
-          <a href="#open-source">Open Source</a>
-          {OPEN_SOURCE.length > 0 && <PanelTitleSup>({OPEN_SOURCE.length})</PanelTitleSup>}
-        </PanelTitle>
+        <div className="flex items-baseline justify-between gap-4">
+          <PanelTitle>
+            <a href={`#${id}`}>Open Source</a>
+            {contributions.length > 0 && <PanelTitleSup>({contributions.length})</PanelTitleSup>}
+          </PanelTitle>
+          {homeLink ? (
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
+              Home
+            </Link>
+          ) : (
+            <Link href="/oss" className="text-sm text-muted-foreground hover:text-foreground">
+              All
+            </Link>
+          )}
+        </div>
         <PanelDescription>Where most of my serious work lives.</PanelDescription>
       </PanelHeader>
 
-      {OPEN_SOURCE.length === 0 ? (
+      {contributions.length === 0 ? (
         <p className="flex items-center gap-2 p-4 text-sm text-muted-foreground">
           <span className="size-2 animate-pulse rounded-full bg-orange-400" aria-hidden />
           Contributions list coming soon...
         </p>
       ) : (
         <div>
-          {OPEN_SOURCE.map((contribution) => (
+          {contributions.map((contribution) => (
             <ContributionItem key={contribution.repo} contribution={contribution} />
           ))}
         </div>
