@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { PiHandbag } from "react-icons/pi";
 import { Panel } from "./Panel";
 
 const About = () => {
@@ -59,32 +58,14 @@ const About = () => {
       <div className="screen-line-bottom space-y-4 p-4">
       <div className="space-y-2 text-sm md:text-base leading-relaxed">
         <p>
-          I write <strong>Go</strong> (mostly), break <strong>distributed systems</strong>, and spend way too much time in <strong>Kubernetes</strong> and <strong>Linux internals</strong>.
+          I write <strong>Go</strong> (mostly), break <strong>distributed systems</strong>, and spend way too much time in <strong>Kubernetes</strong> and <strong>observability</strong>.
         </p>
         <p>
           <strong>Open source</strong> is where most of my serious work lives.
         </p>
         <p>
-          I'm currently available for internships, full-time opportunities, and freelance projects. If you're looking for someone passionate, skilled, and ready to contribute, I'm here to help bring your ideas to life!
+          Available for full-time, contract, and internships in <strong>SWE</strong>, <strong>SRE</strong>, and <strong>DevRel</strong>. I debug in public, apologize in writing, and call that a career.
         </p>
-      </div>
-
-
-      <div className="flex flex-wrap items-center gap-3">
-        <div className="flex items-center space-x-2 px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full">
-          <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
-          <a href="https://twitter.com/tanishqstwt">
-            <span className="text-xs text-green-400">Available for new opportunities</span>
-          </a>
-        </div>
-
-        <a
-          href="mailto:tanishqp101204@gmail.com?subject=Interested in hiring you"
-          className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium border border-primary text-primary rounded-full hover:bg-primary hover:text-background transition"
-        >
-          <PiHandbag className="w-3.5 h-3.5" />
-          Deploy me
-        </a>
       </div>
       </div>
 
