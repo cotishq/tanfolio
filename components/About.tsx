@@ -66,7 +66,7 @@ const About = () => {
           <strong>Open source</strong> is where most of my serious work lives.
         </p>
         <p>
-          Available for full-time, contract, and internships in <strong>SWE</strong>, <strong>SRE</strong>, and <strong>DevRel</strong>. I debug in public, apologize in writing, and call that a career.
+          Available for full-time, contract, and internships in <strong>SWE</strong>, <strong>SRE</strong>, and <strong>DevRel</strong>.
         </p>
       </div>
 
